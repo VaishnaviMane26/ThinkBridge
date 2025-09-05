@@ -1,0 +1,41 @@
+/*Selectors  */
+
+.container{
+    color: brown;
+    background-color: azure;
+    width: 80%;
+    margin: 0 auto;
+     padding: 20px;
+}
+
+
+.title {
+    text-shadow: #333;
+    color: #333;
+    font-size: 2em;
+}
+
+.description {
+    font-style: italic;
+     border: 0cm;
+     background-size: cover;
+    color: #666;
+    font-size: 1.2em;
+}
+
+/* Box Model */
+.decorated-box {
+    text-align: center;
+  width: 200px;                  
+  height: 100px;                  
+  background-color: lightblue;    
+  padding: 20px;                 
+  background-clip: content-box;   
+  box-sizing: content-box;
+  border: 10px solid orange;     
+  margin: 30px;                   
+}
+
+body {
+  background-color: lightyellow;
+}
