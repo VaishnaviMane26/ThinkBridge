@@ -1,0 +1,329 @@
+:root {
+            --primary-color: #00ff66; /* Neon Green */
+            --background-dark: #0a0a0a;
+            --text-light: #f0f0f0;
+            --text-gray: #b0b0b0;
+            --card-background: #1c1c1c;
+            --border-color: #2c2c2c;
+            --transition-speed: 0.4s;
+        }
+
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #0a0f24;
+      color: white ;
+    }
+     h2 {
+      text-align: center;
+      margin: 20px 0;
+      font-size: 2rem;
+    }
+
+    /* Navbar */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #333;
+      color: var(--primary-color);
+      z-index: 1000;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+    }
+
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: white;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .nav-links li a:hover {
+      color: #00bcd4;
+    }
+
+    /* Hide checkbox */
+    #menu-toggle {
+      display: none;
+    }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      font-size: 26px;
+      cursor: pointer;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #333;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 200px;
+        padding: 15px;
+      }
+
+      #menu-toggle:checked + .hamburger + .nav-links {
+        display: flex;
+      }
+
+      .hamburger {
+        display: block;
+      }
+    }
+
+    /* Sections */
+    section {
+      min-height: 100vh;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    /* Profile Image */
+.profile-img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%; /* Circle shape */
+  object-fit: cover;  /* Keeps image ratio, fills nicely */
+  border: 3px solid white; /* Optional border */
+  margin-bottom: 20px; /* Space below image */
+}
+   #home {
+  display: flex;
+  flex-direction: column;  /* Stack image + text vertically */
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full screen height */
+  background-color: black;
+  text-align: center;
+  color: white;
+}
+
+    #home h1 span {
+      font-size: 3rem;
+      color: #00bcd4;
+    }
+
+    #about, #portfolio, #services, #contact {
+      background: #f4f4f4;
+    }
+
+    #about h2, #portfolio h2, #services h2, #contact h2 {
+      margin-bottom: 20px;
+      font-size: 2rem;
+      color: #333;
+    }
+
+    
+    .projects-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .project-card {
+      background: #111a36;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .project-content {
+      padding: 15px;
+    }
+
+    .project-content h3 {
+      margin: 10px 0;
+      font-size: 1.4rem;
+      color: #fff;
+    }
+
+    .project-content p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color: #c9d1d9;
+    }
+
+    .project-link {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 8px 14px;
+      background: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background 0.3s ease;
+    }
+
+    .project-link:hover {
+      background: #0056b3;
+    }
+    .skills-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 25px;
+      max-width: 1100px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .skill-card {
+      background: linear-gradient(to bottom, #ffffff, #0a1a3d);
+      border-radius: 12px;
+      text-align: center;
+      padding: 20px 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 18px rgba(0, 0, 0, 0.6);
+    }
+
+    .skill-card img {
+      width: 60px;
+      height: 60px;
+      object-fit: contain;
+      margin-bottom: 10px;
+    }
+
+    .skill-card h3 {
+      font-size: 1rem;
+      margin: 0;
+      color: #0a0f24;
+    }
+/* Contact Section */
+#contact {
+  text-align: center;
+  padding: 50px;
+  background-color: #222;
+  color: white;
+}
+
+/* Contact Heading */
+#contact h2 {
+  margin-bottom: 20px;
+  color: black;              /* Contact text black */
+  background: white;         /* White background */
+  display: inline-block;     /* Inline block so bg fits text */
+  padding: 10px 20px;
+  border-radius: 6px;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+/* Hover effect on Contact heading */
+#contact h2:hover {
+  background: #ff9800;  /* Orange hover */
+  color: white;         /* White text */
+  transform: scale(1.1); /* Zoom effect */
+}
+/* CV Upload Box */
+.cv-upload {
+  margin-top: 20px;
+}
+
+.cv-upload input[type="file"] {
+  padding: 8px;
+  margin: 10px 0;
+  background: #fff;
+  border-radius: 5px;
+}
+
+.cv-upload input[type="submit"] {
+  padding: 10px 20px;
+  border: none;
+  background-color: #ff9800;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cv-upload input[type="submit"]:hover {
+  background-color: #e68900;
+}
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 15px;
+      background: #333;
+      color: white;
+    }
+
+  footer {
+    background: #333;
+    color: #fff;
+    padding: 20px 10px;
+    text-align: center;
+  }
+
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .social-links {
+    display: flex;
+    gap: 20px;
+  }
+
+  .social-links a {
+    color: #00bcd4;
+    font-size: 20px;
+    transition: 0.3s;
+  }
+
+  .social-links a:hover {
+    color: #0097a7;
+  }
