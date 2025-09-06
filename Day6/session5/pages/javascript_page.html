@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="javascript_page.css">
+</head>
+<body>
+<h1>JavaScript Basics</h1>
+
+<!-- Table of Contents -->
+<nav>
+  <a href="#variables">Variables</a>
+  <a href="#datatypes">Data Types</a>
+  <a href="#functions">Functions</a>
+  <a href="#loops">Loops</a>
+  <a href="#conditions">Conditions</a>
+  <a href="#events">Events</a>
+</nav>
+
+<!-- Variables -->
+<div class="card" id="variables">
+
+  <h2>Variables</h2>
+  <p>Variables store data values in JavaScript. Use <code>let</code>, 
+    <code>const</code>, or 
+    <code>var</code>.  
+   <code>let</code> 
+   allows block-scoped variables, 
+   <code>const</code> declares constants, 
+   and <code>var</code> is function-scoped.</p>
+  <pre><code>
+    let name = "Vaishnavi";
+    const age = 24;
+    var city = "Mumbai";</code></pre>
+</div>
+
+<!-- Data Types -->
+<div class="card" id="datatypes">
+  <h2>Data Types</h2>
+  <p>JavaScript supports primitive types: string, number, boolean, null, undefined. Objects and arrays store multiple values.</p>
+  <pre><code>
+    let name = "Vaishnavi";            // string
+    let age = 24;                      // number
+    let isStudent = true;              // boolean
+    let person = {
+                   name:"Vaishnavi", 
+                   age:24
+              };                         // object
+    let numbers = [1,2,3];               // array
+  
+  </code></pre>
+</div>
+
+<!-- Functions -->
+<div class="card" id="functions">
+
+  <h2>Functions</h2>
+
+  <p>Functions are reusable blocks of code. There are three types:  
+     Function declarations, function expressions, and arrow functions.</p>
+
+  <pre><code>// Declaration
+
+function greet(name) {
+  return "Hello " + name;
+}
+
+// Expression
+const greet2 = function(name) {
+  return "Hi " + name;
+}
+
+// Arrow
+const greet3 = name => "Hey " + name;</code></pre>
+</div>
+
+<!-- Loops -->
+<div class="card" id="loops">
+  <h2>Loops</h2>
+  <p>Loops execute code repeatedly. Common loops include <code>for</code>, <code>while</code>, and <code>do-while</code>.</p>
+  <pre>
+  <code>
+
+    for(let i=0; i<5; i++){
+                            console.log(i);
+                       }
+
+             let i = 0;
+                  while(i<5){
+                  console.log(i);
+                   i++;
+            }
+    </code>
+  </pre>
+</div>
+
+<!-- Conditions -->
+<div class="card" id="conditions">
+  <h2>Conditions</h2>
+  <p>Conditions control program flow. Use <code>if</code>, <code>else if</code>, <code>else</code>, or <code>switch</code> statements.</p>
+  <pre><code>
+
+    let age = 18;
+    if(age >= 18){
+       console.log("Adult");
+   } else 
+   {
+      console.log("Minor");
+  }
+
+switch(age){
+   case 18: console.log("Just Adult"); 
+   break;
+   default: console.log("Other age");
+   }</code></pre>
+</div>
+
+<!-- Events -->
+<div class="card" id="events">
+  <h2>Events</h2>
+  <p>Events let JavaScript respond to user actions like clicks, key presses, or mouse movements.</p>
+  <pre><code>
+    button.addEventListener("click", function()
+    {
+         alert("Button clicked!");
+  });
+ </code>
+</pre>
+</div>
+
+<script src="javascript_page.js"></script>
+
+ <!-- Footer -->
+  <div class="footer">© 2025 Learn JavaScript Tutorial</div>
+  
+</body>
+</html>

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css_page.css">
+    
+</head>
+<body>
+    <h1>Welcome to the CSS page..</h1>
+
+    
+  <h1>CSS Tutorial</h1>
+
+  <!-- Table of Contents -->
+  <nav class="toc">
+    <ul>
+      <li><a href="#syntax">CSS Syntax</a></li>
+      <li><a href="#selectors">Selectors</a></li>
+      <li><a href="#colors">Colors & Backgrounds</a></li>
+      <li><a href="#text">Fonts & Text</a></li>
+      <li><a href="#box">Box Model</a></li>
+      <li><a href="#display">Display & Position</a></li>
+      <li><a href="#flex">Flexbox</a></li>
+      <li><a href="#grid">Grid</a></li>
+      <li><a href="#lists">Lists</a></li>
+      <li><a href="#tables">Tables</a></li>
+      <li><a href="#forms">Forms</a></li>
+      <li><a href="#animations">Animations</a></li>
+      <li><a href="#shadows">Shadows & Gradients</a></li>
+      <li><a href="#media">Media Queries</a></li>
+      <li><a href="#variables">CSS Variables</a></li>
+    </ul>
+  </nav>
+<!-- CSS Topics Cards with Syntax -->
+<div class="card" id="syntax">
+  <h2>CSS Syntax</h2>
+  <p>CSS rules consist of a selector and a declaration block. The selector chooses the element to style, and the declaration block contains property-value pairs.</p>
+  <pre><code>
+selector {
+  property: value;
+}
+  </code></pre>
+</div>
+
+<div class="card" id="selectors">
+  <h2>Selectors</h2>
+  <p>Selectors target HTML elements. Examples include element selectors, class selectors, ID selectors, descendant selectors, and pseudo-classes for hover or focus effects.</p>
+  <pre><code>
+
+p { 
+    color: red;
+ }       /* element */
+
+#myId { 
+     color: blue;
+   }  /* ID */
+
+.myClass {
+     color: green;
+ } /* class */
+
+a:hover { 
+    text-decoration: underline;
+ } /* pseudo-class */
+  </code></pre>
+</div>
+
+<div class="card" id="colors">
+  <h2>Colors & Backgrounds</h2>
+  <p>CSS allows setting text and background colors using names, hex, RGB, or RGBA. Background images can also be applied and controlled with size, repeat, and position.</p>
+  <pre><code>
+p {
+  color: #333;                     /* text color */
+  background-color: #f9f9f9;       /* background color */
+  background-image: url('bg.jpg'); /* background image */
+  background-size: cover;
+}
+  </code></pre>
+</div>
+
+<div class="card" id="text">
+  <h2>Fonts & Text</h2>
+  <p>Font family, size, weight, style, alignment, decoration, spacing, and line-height can all be controlled using CSS to make text readable and stylish.</p>
+  <pre><code>
+p {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  font-weight: bold;
+  font-style: italic;
+  text-align: center;
+  text-decoration: underline;
+  line-height: 1.5;
+}
+  </code></pre>
+</div>
+
+<div class="card" id="box">
+  <h2>Box Model</h2>
+  <p>Every element has content, padding, border, and margin. Box-sizing determines whether padding and border are included in the element's total width and height.</p>
+  <pre><code>
+div {
+  width: 200px;
+  height: 100px;
+  padding: 10px;
+  border: 2px solid black;
+  margin: 20px;
+  box-sizing: border-box;
+}
+  </code></pre>
+</div>
+
+<div class="card" id="display">
+  <h2>Display & Position</h2>
+  <p>Elements can be displayed as block, inline, or inline-block. Positioning includes static, relative, absolute, fixed, and sticky, controlling the element's placement on the page.</p>
+  <pre><code>
+div { 
+    display: block;
+ }
+
+span {
+       display: inline;
+    }
+
+li { 
+    display: inline-block;
+ }
+
+.relative { 
+    position: relative;
+    top: 10px; 
+    left: 10px;
+ }
+
+.absolute { 
+    position: absolute;
+    top: 50px; 
+    right: 20px; 
+}
+
+.fixed {
+     position: fixed;
+     top: 0; 
+    }
+
+.sticky { 
+          position: sticky;
+          top: 0; 
+    }
+  </code></pre>
+</div>
+
+<div class="card" id="flex">
+  <h2>Flexbox</h2>
+  <p>Flexbox provides a way to layout elements in a row or column, aligning and distributing space efficiently. It supports justify-content, align-items, and gap properties.</p>
+  <pre><code>
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+}
+  </code></pre>
+</div>
+
+<div class="card" id="grid">
+  <h2>Grid</h2>
+  <p>CSS Grid allows creating complex layouts with rows and columns. Grid-template-columns, grid-gap, and grid-template-areas define the structure for content placement.</p>
+  <pre><code>
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+.grid-item {
+  padding: 20px;
+  text-align: center;
+}
+  </code></pre>
+</div>
+
+<div class="card" id="lists">
+  <h2>Lists</h2>
+  <p>CSS can style ordered and unordered lists. List-style-type, padding, margin, and custom icons allow lists to match the design.</p>
+  <pre><code>
+ul { 
+    list-style-type: disc; 
+}
+
+ol { 
+    list-style-type: decimal; 
+}
+ul li { 
+         margin: 5px 0;
+     }
+  </code></pre>
+</div>
+
+<div class="card" id="tables">
+  <h2>Tables</h2>
+  <p>Tables can be styled with borders, padding, background colors, and text alignment to make them clean and readable.</p>
+  <pre><code>
+table {
+          border-collapse: collapse; 
+          width: 80%; 
+    }
+
+th, td {
+          border: 1px solid #ddd; 
+          padding: 8px; 
+          text-align: center; 
+        }
+
+th {
+     background-color: #34495e; 
+     color: white;
+ }
+  </code></pre>
+</div>
+
+<div class="card" id="forms">
+  <h2>Forms</h2>
+  <p>Input fields, text areas, buttons, and labels can be styled with colors, padding, borders, and hover effects for better usability.</p>
+  <pre><code>
+input, textarea {
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+button {
+  padding: 10px;
+  background-color: #27ae60;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover { background-color: #219150; }
+  </code></pre>
+</div>
+
+<div class="card" id="animations">
+  <h2>Animations</h2>
+  <p>Transitions and keyframe animations allow elements to move, fade, or change styles smoothly, adding interactivity and visual interest.</p>
+  <pre><code>
+button {
+  transition: background 0.3s, transform 0.3s;
+}
+button:hover { transform: scale(1.1); }
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+  </code></pre>
+</div>
+
+<div class="card" id="shadows">
+  <h2>Shadows & Gradients</h2>
+  <p>Box-shadow and text-shadow add depth. Gradients create smooth color transitions for backgrounds or text, enhancing visual appeal.</p>
+  <pre><code>
+div {
+     box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+     }
+p { 
+    text-shadow: 2px 2px #aaa;
+ }
+div { 
+    background: linear-gradient(to right, #e67e22, #f1c40f);
+ }
+  </code></pre>
+</div>
+
+<div class="card" id="media">
+  <h2>Media Queries</h2>
+  <p>Media queries allow responsive designs by applying different styles based on screen width, height, or device type.</p>
+  <pre><code>
+body { font-size: 14px; }
+@media (min-width: 768px) { 
+     body { 
+        font-size: 16px;
+     } }
+@media (min-width: 1024px) { 
+                  body { font-size: 18px; }
+                 }
+  </code></pre>
+</div>
+
+<div class="card" id="variables">
+  <h2>CSS Variables</h2>
+  <p>Variables store reusable values like colors, fonts, or spacing. They help maintain consistency and simplify updates across the CSS file.</p>
+  <pre><code>
+:root {
+  --primary-color: #3498db;
+  --secondary-color: #e67e22;
+}
+div { background-color: var(--primary-color);
+     color: white; }
+  </code></pre>
+</div>
+
+
+  <script src="css_page.js"></script>
+    <div class="footer">© 2025 Learn CSS Tutorial</div>
+</body>
+</html>
